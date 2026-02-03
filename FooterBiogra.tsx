@@ -109,8 +109,13 @@ export function FooterBiogra() {
               className="footer-btn"
             >
               <Link
-                to="#contact"
-                onClick={() => scrollToSection("#contact")}
+                to="/contact"
+                onClick={() => {
+                  // Scroll to 600px from top when navigating
+                  setTimeout(() => {
+                    window.scrollTo({ top: 600, behavior: 'smooth' });
+                  }, 100);
+                }}
                 className="inline-block px-8 py-4 rounded-full bg-gradient-primary text-primary-foreground font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all"
               >
                 Connect with us
